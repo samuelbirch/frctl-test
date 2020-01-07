@@ -1,0 +1,33 @@
+	{% import '@helpers--generic' as generic %}
+	{% import '@helpers--images' as images %}
+	{% import '@helpers--form' as form %}
+
+	{% do kd.inlineCss('css/heading/heading.css') %}
+
+	{% set theme %}{{ generic.theme(module.theme) }}{% endset %}
+	{% set attributes = {
+		data: {
+			id: loop.index,
+			'kd-handle': 'heading',
+			'kd-theme': theme,
+			'kd-type': 'mod',
+		},
+		class: [
+			'kd-theme-bg',
+			module.padding,
+			module.border,
+		],
+	} %}
+
+	<section {{ attr(attributes) }}>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 kd-theme-yiq-text">
+					<div class="module-header">
+						<h{{ titleTag ?? '2' }} class="heading">{{ generic.title(module) }}</h{{ titleTag ?? '2' }}>
+						{% if module.summary %}<span class="intro">{{ module.summary }}</span>{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

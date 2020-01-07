@@ -1,0 +1,31 @@
+	{% import '@helpers--generic' as generic %}
+	{% import '@helpers--images' as images %}
+	{% import '@helpers--form' as form %}
+
+	{# {% do kd.registerCssFile('css/form.css') %} #}
+	{% do kd.inlineCss('css/@@name/@@name.css') %}
+
+	{% set theme %}{{ generic.theme(module.theme) }}{% endset %}
+	{% set attributes = {
+		data: {
+			id: loop.index,
+			'kd-id': '000',
+			'kd-handle': '@@name',
+			'kd-theme': theme,
+			'kd-type': 'mod',
+		},
+		class: [
+			'kd-theme-bg',
+			module.padding,
+			module.layoutFlip ? 'desktop-layout-flip' : '',
+			module.border,
+		],
+	} %}
+
+	<section {{ attr(attributes) }}>
+		<div class="container">
+			<div class="row">
+				
+			</div>
+		</div>
+	</section>

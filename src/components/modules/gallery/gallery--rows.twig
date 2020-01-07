@@ -1,0 +1,48 @@
+	{% import '@helpers--generic' as generic %}
+	{% import '@helpers--images' as images %}
+	{% import '@helpers--form' as form %}
+
+	{% do kd.inlineCss('css/gallery/gallery.css') %}
+
+	{% set theme %}{{ generic.theme(module.theme) }}{% endset %}
+	{% set attributes = {
+		data: {
+			id: loop.index,
+			'kd-id': '104b',
+			'kd-handle': 'gallery',
+			'kd-theme': theme,
+			'kd-type': 'mod',
+		},
+		class: [
+			'kd-theme-bg',
+			'temp-height',
+			module.padding,
+			module.border,
+		],
+	} %}
+
+	<section {{ attr(attributes) }}>
+		<div class="container">
+		{% for row in module.rows %}
+			<div class="row">
+			{% for image in row.images %}
+				<div class="col-12 col-sm-{{ row.layout[loop.index0] }} p-0">
+					<div class="gallery-item" {% if module.tint %}data-toggle="modal" data-full-src="{{ images.url(image,[{width:500}]) }}" data-target="#mod104Modal-{{ loopId }}"{% endif %}>
+						{{ images.image(image,[{width:262, height:262}])}}
+						{# <img class="img-fluid" src="{{ galleryItem.image.one.url }}"	alt="from CMS"> #}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		{% endfor %}
+		</div>
+		{# modal for larger image #}
+		<div class="modal fade" id="mod104Modal-{{ loopId }}" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<img class="img-fluid" src="" alt="">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+				</div>
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
+
+
+<title>Helpers: Form | Kurious Digital</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+    </button>
+    <a href="../../index.html" class="Header-title" data-pjax>Kurious Digital</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+
+    
+    
+
+<div class="Pen" data-behaviour="pen" id="pen-60d49ecdc72aac7f0570db8d25173f8a">
+
+    
+
+    <div class="Pen-panel Pen-header">
+    <h1 class="Pen-title">
+        <a class="Pen-previewLink" href="../preview/helpers--form.html" title="Component preview">
+            Helpers: Form
+            <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+
+        </a>
+    </h1>
+    
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #29CC29; border-color: #29CC29;">Ready</label>
+
+</div>
+
+
+</div>
+
+
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-60d49ecdc72aac7f0570db8d25173f8a">
+    <div class="Preview-wrapper" data-role="resizer">
+        <div class="Preview-resizer">
+            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/helpers--form.html"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
+                 style=""
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
+        </div>
+        <div class="Preview-handle" data-role="resize-handle"></div>
+        <div class="Preview-overlay"></div>
+    </div>
+</div>
+
+
+    <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
+
+    <div class="Pen-panel Pen-info" data-role="info">
+    <div class="Browser" data-behaviour="browser" id="browser-60d49ecdc72aac7f0570db8d25173f8a">
+
+    
+
+<div class="Browser-controls">
+    <ul class="Browser-tabs">
+        
+        
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
+            <a href="#browser-60d49ecdc72aac7f0570db8d25173f8a-panel-html">HTML</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--view" data-role="tab">
+            <a href="#browser-60d49ecdc72aac7f0570db8d25173f8a-panel-view">View</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--context" data-role="tab">
+            <a href="#browser-60d49ecdc72aac7f0570db8d25173f8a-panel-context">Context</a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-60d49ecdc72aac7f0570db8d25173f8a-panel-info">Info</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-60d49ecdc72aac7f0570db8d25173f8a-panel-notes">Notes</a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-60d49ecdc72aac7f0570db8d25173f8a-panel-html">
+    <code class="Code Code--lang-html">
+        
+        <pre></pre>
+        
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-60d49ecdc72aac7f0570db8d25173f8a-panel-view">
+    <code class="Code Code--lang-twig">
+        <pre><span class="hljs-comment">{# require plugins:
+	- marionnewlevant/twig-perversion
+#}</span><span class="xml">
+
+</span><span class="hljs-comment">{# public functions #}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> field(props, account) %}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.type == "textarea" %}</span><span class="xml">
+		</span><span class="hljs-template-variable">{{ _self.textarea(props, account) }}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> props.type == "checkbox" %}</span><span class="xml">
+		</span><span class="hljs-template-variable">{{ _self.checkbox(props, account) }}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> props.type == "radio_group" %}</span><span class="xml">
+		</span><span class="hljs-template-variable">{{ _self.radio(props, account) }}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> props.type == "textarea" %}</span><span class="xml">
+		</span><span class="hljs-template-variable">{{ _self.input(props, account) }}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-comment">{# input #}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> input(props, account) %}</span><span class="xml">
+	
+	</span><span class="hljs-template-variable">{{ _self.prefix(props) }}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.button is defined or props.prepend is defined %}</span><span class="xml">
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-group </span></span></span><span class="hljs-template-variable">{{ props.inputGroupClass ?? 'pl-md-3' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+		</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.prepend is defined %}</span><span class="xml">
+			<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-group-prepend"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-group-text bg-transparent"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"small text-muted"</span>&gt;</span></span><span class="hljs-template-variable">{{ props.prepend }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+		</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+		<span class="hljs-tag">&lt;<span class="hljs-name">input</span> </span></span><span class="hljs-template-variable">{{ _self.attr(props) }}</span><span class="xml"><span class="hljs-tag"> &gt;</span>
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.button is defined  or props.prepend is defined %}</span><span class="xml">
+		</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.button is defined %}</span><span class="xml">
+			<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"input-group-append"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">-btn"</span>&gt;</span></span><span class="hljs-template-variable">{{ props.button }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+		</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+	</span><span class="hljs-template-variable">{{ _self.suffix(props) }}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-comment">{# password #}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> password(props, account) %}</span><span class="xml">
+	
+	</span><span class="hljs-template-variable">{{ _self.prefix(props) }}</span><span class="xml">
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pwd-show"</span> <span class="hljs-attr">data-mod</span>=<span class="hljs-string">"showPassword"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">input</span> </span></span><span class="hljs-template-variable">{{_self.attr(props|<span class="hljs-keyword">merge</span>({type:'password'}))}}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-sm"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"24"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"24"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 24 24"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">stroke</span>=<span class="hljs-string">"currentColor"</span>
+			<span class="hljs-attr">stroke-width</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">stroke-linecap</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">stroke-linejoin</span>=<span class="hljs-string">"round"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"feather feather-eye-off"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">path</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">line</span> <span class="hljs-attr">x1</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">y1</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">x2</span>=<span class="hljs-string">"23"</span> <span class="hljs-attr">y2</span>=<span class="hljs-string">"23"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">line</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.help is defined %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-text text-muted"</span>&gt;</span></span><span class="hljs-template-variable">{{ props.help }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"invalid-feedback"</span>&gt;</span></span><span class="hljs-template-variable">{{ (props.error ?? props.validation ?? '')|<span class="hljs-keyword">raw</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.indicator %}</span><span class="xml">
+	<span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-text text-muted mb-1"</span>&gt;</span>Password Strength: <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"meter-text"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height: 5px;"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"progress-bar"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"progressbar"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 0%;"</span> <span class="hljs-attr">aria-valuenow</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemin</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">aria-valuemax</span>=<span class="hljs-string">"100"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-comment">{# text #}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> textarea(props, account) %}</span><span class="xml">
+	
+	</span><span class="hljs-template-variable">{{ _self.prefix(props) }}</span><span class="xml">
+		<span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> </span></span><span class="hljs-template-variable">{{_self.attr(props) }}</span><span class="xml"><span class="hljs-tag">
+			<span class="hljs-attr">rows</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.rows ?? 4 }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>
+		&gt;</span></span><span class="hljs-template-variable">{{ props.value }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+	</span><span class="hljs-template-variable">{{ _self.suffix(props) }}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> checkbox(props, account) %}</span><span class="xml">
+	
+
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group </span></span></span><span class="hljs-template-variable">{{ props.width }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{  props.error ? 'is-invalid':'' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control custom-checkbox"</span>&gt;</span>
+			</span><span class="hljs-comment">{# &lt;input {{ self.attr(props|merge({type:'checkbox',class:'custom-control-input'}))}}&gt; #}</span><span class="xml">
+			<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.name }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> </span></span><span class="hljs-template-variable">{{ props.checked ? 'checked' }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+			</span><span class="hljs-comment">{# &lt;label class="custom-control-label" for="{{ props.id }}"&gt;{{ props.label ?? '' }}&lt;/label&gt; #}</span><span class="xml">
+			</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span>  props.label %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{  props.horizontal ? 'col-2' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> custom-control-label </span></span></span><span class="hljs-template-variable">{{ props.labelClass ?? '' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{  props.label }}</span><span class="xml"> </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.required is not defined or not props.required %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-muted font-weight-normal small"</span>&gt;</span>- optional<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+
+		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.help is defined %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-text text-muted"</span>&gt;</span></span><span class="hljs-template-variable">{{ props.help }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"invalid-feedback"</span>&gt;</span></span><span class="hljs-template-variable">{{ (props.error ?? props.validation ?? '')|<span class="hljs-keyword">raw</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-comment">{# file #}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> file(props, account) %}</span><span class="xml">
+	
+	</span><span class="hljs-template-variable">{{ _self.prefix(props) }}</span><span class="xml">
+		<span class="hljs-tag">&lt;<span class="hljs-name">input</span> </span></span><span class="hljs-template-variable">{{_self.attr(props|<span class="hljs-keyword">merge</span>({type:'file'}))}}</span><span class="xml"><span class="hljs-tag"> &gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-file-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ props.placeholder ?? '' }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+	</span><span class="hljs-template-variable">{{ _self.suffix(props) }}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-comment">{# select #}</span><span class="xml">
+</span><span class="hljs-comment">{# 
+	standard:
+	options: [
+		value: label,
+	]
+
+	grouped:
+	options: [
+		name: [
+			value: label,
+		]
+	]
+#}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> select(props, account) %}</span><span class="xml">
+
+	
+	</span><span class="hljs-template-variable">{{ _self.prefix(props) }}</span><span class="xml">
+		<span class="hljs-tag">&lt;<span class="hljs-name">select</span> </span></span><span class="hljs-template-variable">{{ _self.attr(props) }}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">selected</span> <span class="hljs-attr">disabled</span>&gt;</span>Please select<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+			</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> key, value in props.options %}</span><span class="xml">
+				</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> value is iterable %}</span><span class="xml">
+				<span class="hljs-tag">&lt;<span class="hljs-name">optgroup</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ key }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+					</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> k, val in value %}</span><span class="xml">
+						</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> k = k|<span class="hljs-keyword">replace</span>('_','') %}</span><span class="xml">
+						<span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ k }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-variable">{{ k == props.value ? 'selected' }}</span><span class="xml"><span class="hljs-tag">&gt;</span></span><span class="hljs-template-variable">{{ val }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+					</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+				<span class="hljs-tag">&lt;/<span class="hljs-name">optgroup</span>&gt;</span>
+				</span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
+				</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> key = key|<span class="hljs-keyword">replace</span>('_','') %}</span><span class="xml">
+				<span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ key }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-variable">{{ key == props.value ? 'selected' }}</span><span class="xml"><span class="hljs-tag">&gt;</span></span><span class="hljs-template-variable">{{ value }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+				</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+			</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+		<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+	</span><span class="hljs-template-variable">{{ _self.suffix(props) }}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-comment">{# e.g. {{ form.btn( 'Submit',{style: 'primary',type:'submit'}) }} #}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> btn(text, props) %}</span><span class="xml">
+	
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> style = props.style ?? 'primary' %}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> class = props.class ?? '' %}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> type = props.type ?? 'submit' %}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> disabled = props.disabled ?? false %}</span><span class="xml">
+	<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ type }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-</span></span></span><span class="hljs-template-variable">{{ style }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{ class }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-variable">{{ disabled ? 'disabled' }}</span><span class="xml"><span class="hljs-tag"> 
+	</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.data is defined %}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> key, data in props.data %}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">data-</span></span></span><span class="hljs-template-variable">{{ key }}</span><span class="xml"><span class="hljs-tag">=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ data }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml"><span class="hljs-tag"></span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"spinner-border spinner-border-sm mr-1"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"status"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-variable">{{ text }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> radio(props) %}</span><span class="xml">
+	
+		</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">set</span></span> error = props.error ?? null %}</span><span class="xml">
+		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group </span></span></span><span class="hljs-template-variable">{{ props.width }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{  error ? 'is-invalid':'' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.labelClass ?? 'font-weight-bold small' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ props.label }}</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.required is not defined or not props.required %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-muted font-weight-normal small"</span>&gt;</span>- optional<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+			</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> option in props.options %}</span><span class="xml">
+				<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control custom-radio"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-input"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.name }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.id ~ '-' ~ loop.index }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ option.value }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-variable">{{ option.checked ? 'checked'}}</span><span class="xml"><span class="hljs-tag">&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-label </span></span></span><span class="hljs-template-variable">{{ props.labelClass ?? '' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.id ~ '-' ~ loop.index }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ option.label }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="xml">
+			</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.help is defined %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-text text-muted"</span>&gt;</span></span><span class="hljs-template-variable">{{ props.help }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+			<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"invalid-feedback"</span>&gt;</span></span><span class="hljs-template-variable">{{ (error ?? props.validation ?? '')|<span class="hljs-keyword">raw</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+
+</span><span class="hljs-comment">{# private functions #}</span><span class="xml">
+
+
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> prefix(props) %}</span><span class="xml">
+		</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.group ?? true %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group </span></span></span><span class="hljs-template-variable">{{  props.horizontal ? 'row' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{ props.width ?? '' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{ props.class ?? '' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{  props.error ? 'is-invalid':'' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> </span></span><span class="hljs-template-variable">{{ props.indicator ? 'data-mod="passwordMeter"'}}</span><span class="xml"><span class="hljs-tag">&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+		</span><span class="hljs-comment">{# &lt;div class="form-group {{  props.horizontal ? 'row' }} {{ props.width ?? '' }} {{ props.class ?? '' }} {{  props.error ? 'is-invalid':'' }}" {{ props.indicator ? 'data-mod="passwordMeter"'}}&gt; #}</span><span class="xml">
+		</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span>  props.label %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ props.id }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{  props.horizontal ? 'col-2' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string"> </span></span></span><span class="hljs-template-variable">{{ props.labelClass ?? 'font-weight-bold small' }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{  props.label }}</span><span class="xml"> </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.required is not defined or not props.required %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-muted font-weight-normal small"</span>&gt;</span>- optional<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+		</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.horizontal %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-10"</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> suffix(props) %}</span><span class="xml">
+		</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.help is defined %}</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-text text-muted"</span>&gt;</span></span><span class="hljs-template-variable">{{ props.help }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"invalid-feedback"</span>&gt;</span></span><span class="hljs-template-variable">{{ (props.error ?? props.validation ?? '')|<span class="hljs-keyword">raw</span> }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span>  props.label and props.horizontal %}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.group ?? true %}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span><span class="xml">
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">macro</span></span> attr(props) %}</span><span class="xml">
+	class="</span><span class="hljs-template-variable">{{ props.inputClass ?? 'form-control form-control-lg' }}</span><span class="xml"> </span><span class="hljs-template-variable">{{  props.error ? 'is-invalid':'' }}</span><span class="xml">" 
+	type="</span><span class="hljs-template-variable">{{  props.type ?? 'text' }}</span><span class="xml">" 
+	value="</span><span class="hljs-template-variable">{{  props.value ?? '' }}</span><span class="xml">" 
+	id="</span><span class="hljs-template-variable">{{  props.id ?? props.name ?? '' }}</span><span class="xml">" 
+	name="</span><span class="hljs-template-variable">{{  props.name ?? '' }}</span><span class="xml">" 
+	placeholder="</span><span class="hljs-template-variable">{{ props.placeholder ?? '' }}</span><span class="xml">" 
+	</span><span class="hljs-template-variable">{{ props.readonly is defined and props.readonly ? 'readonly' }}</span><span class="xml">
+	</span><span class="hljs-template-variable">{{ props.required is defined and props.required ? 'required'}}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.pattern is defined %}</span><span class="xml">pattern="</span><span class="hljs-template-variable">{{ props.pattern }}</span><span class="xml">"</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.title is defined %}</span><span class="xml">title="</span><span class="hljs-template-variable">{{ props.title }}</span><span class="xml">"</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.data is defined %}</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> key, data in props.data %}</span><span class="xml">data-</span><span class="hljs-template-variable">{{ key }}</span><span class="xml">="</span><span class="hljs-template-variable">{{ data }}</span><span class="xml">" </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+	</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> props.aria is defined %}</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">for</span></span> key, data in props.aria %}</span><span class="xml">aria-</span><span class="hljs-template-variable">{{ key }}</span><span class="xml">="</span><span class="hljs-template-variable">{{ data }}</span><span class="xml">" </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endfor</span></span> %}</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
+</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endmacro</span></span> %}</span></pre>
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-60d49ecdc72aac7f0570db8d25173f8a-panel-context">
+    <code class="Code Code--lang-json">
+        
+            
+            <pre><span class="hljs-comment">/* No context defined for this component. */</span></pre>
+            
+        
+    </code>
+</div>
+
+    
+    
+
+
+    
+    <div class="Browser-panel" data-role="tab-panel" id="browser-60d49ecdc72aac7f0570db8d25173f8a-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@helpers--form</span>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Variants <em class="Meta-count">(4)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="helpers--default.html">
+                    <span>Default</span>
+                </a>, 
+            
+                <a href="">
+                    <span>Form</span>
+                </a>, 
+            
+                <a href="helpers--generic.html">
+                    <span>Generic</span>
+                </a>, 
+            
+                <a href="helpers--images.html">
+                    <span>Images</span>
+                </a>
+            
+            </span>
+        </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/helpers--form.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                    <li><a data-no-pjax href="../render/helpers--form.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">../src/components/_helpers/helpers--form.twig</span>
+        </li>
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(6)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="example.html">@<span>example</span></a>, 
+            
+                <a href="example--two.html">@<span>example--two</span></a>, 
+            
+                <a href="gallery.html">@<span>gallery</span></a>, 
+            
+                <a href="gallery--grid.html">@<span>gallery--grid</span></a>, 
+            
+                <a href="gallery--rows.html">@<span>gallery--rows</span></a>, 
+            
+                <a href="heading.html">@<span>heading</span></a>
+            
+            </span>
+        </li>
+        
+    </ul>
+</div>
+
+    
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-60d49ecdc72aac7f0570db8d25173f8a-panel-notes">
+    <div class="Prose Prose--condensed">
+        
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        
+    </div>
+</div>
+
+    
+
+</div>
+
+</div>
+
+
+    
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-modules">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Modules</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-example">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Example</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="example--one.html" data-pjax>
+                <span>Example 1</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="example--two.html" data-pjax>
+                <span>Example 2</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="example--three.html" data-pjax>
+                <span>Three</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-gallery">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Gallery</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="gallery--masonry.html" data-pjax>
+                <span>Masonry</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="gallery--grid.html" data-pjax>
+                <span>Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="gallery--rows.html" data-pjax>
+                <span>Rows</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading.html" data-pjax>
+                <span>Heading</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Pages</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="examples.html" data-pjax>
+                <span>Examples</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="gallerys.html" data-pjax>
+                <span>Gallerys</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <h3 class="Tree-title">documentation</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../index.html" data-pjax>
+                <span>Overview</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+
+
+
+</body>
+</html>

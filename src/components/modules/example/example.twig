@@ -1,0 +1,46 @@
+	{% import '@helpers--generic' as generic %}
+	{% import '@helpers--images' as images %}
+	{% import '@helpers--form' as form %}
+
+	{% do kd.registerCssFile('css/form.css') %}
+	{% do kd.inlineCss('css/example/example.css') %}
+
+	{% set theme %}{{ generic.theme(module.theme) }}{% endset %}
+	{% set attributes = {
+		data: {
+			id: loop.index,
+			'kd-id': '014',
+			'kd-handle': 'example',
+			'kd-theme': theme,
+			'kd-type': 'mod',
+		},
+		class: [
+			'kd-theme-bg',
+			module.padding,
+			module.layoutFlip ? 'desktop-layout-flip' : '',
+			module.border,
+		],
+	} %}
+
+	<section {{ attr(attributes) }}>
+		<div class="container">
+			<div class="row {{ module.imageAlignment ?? 'align-items-center' }}">
+				<div class="col-sm-5 mb-5 mb-sm-0 text-center">
+					{{ images.picture(module.image,
+						[	{width:445,media:'xl'},
+							{width:370,media:'lg'},
+							{width:270,media:'md'},
+							{width:195,media:'sm'},
+							{width:515}
+						],{class:'img-fluid w-100'}) }}
+				</div>
+				<div class="col-sm-6 offset-sm-1 kd-theme-yiq-text styled-links content">
+					<h{{ titleTag ?? '2' }}>{{ module.heading }}</h{{ titleTag ?? '2' }}>
+					{{ module.body }}
+					{% if module.button|length %}
+						<p>{{ generic.linkBtn(module.button,'btn-lg','primary') }}</p>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,6 @@
+{
+    "baseName": "component",
+    "basePath": "src/components/modules",
+	"baseDir": "src",
+    "template": "base"
+}

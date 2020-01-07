@@ -1,0 +1,10 @@
+{
+  "css/example/example.css": "css/example/example.css",
+  "css/gallery/gallery--masonry.css": "css/gallery/gallery--masonry.css",
+  "css/gallery/gallery.css": "css/gallery/gallery.css",
+  "css/heading/heading.css": "css/heading/heading.css",
+  "css/vendor/swiper.css": "css/vendor/swiper.css",
+  "css/form.css": "css/form.css",
+  "js/app.js": "js/app.js",
+  "css/kurious.css": "css/kurious.css"
+}

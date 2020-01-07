@@ -1,0 +1,147 @@
+{
+	"name": "kurious-digital",
+	"version": "0.1.1",
+	"company": "Kurious Agency",
+	"author": "Samuel Birch <sam@kurious.agency>",
+	"license": "MIT",
+	"scripts": {
+		"//1": " --- GENERAL --- ",
+		"prestart": "yarn predev",
+		"start": "run-p 'watch' 'fractal:start'",
+		"predev": "yarn clean && yarn js:dev && yarn css:dev && yarn hash:dev",
+		"dev": "yarn watch",
+		"publish:templates": "yarn fractal:build && yarn fractal:publish && yarn js:dev && yarn css:dev",
+		"//2": " --- FRACTAL --- ",
+		"fractal:start": "(cd ./config && fractal start -s -w)",
+		"fractal:build": "(cd ./src/components/modules && copyfiles ./**/*.twig ./../../../templates/_modules) && yarn fractal:map",
+		"fractal:map": "(cd ./config && fractal map)",
+		"fractal:publish": "(cd ./config && fractal build)",
+		"//3": " --- CSS --- ",
+		"css:dev": "node-sass src/scss --importer node_modules/node-sass-magic-importer/dist/cli.js --include-path node_modules/bootstrap/scss --output public/assets/css --precision 6 && yarn css:modules",
+		"css:modules": "node-sass src/components/modules --importer node_modules/node-sass-magic-importer/dist/cli.js --include-path node_modules/bootstrap/scss --output public/assets/css --precision 6 && yarn css:post",
+		"css:prod": "node-sass src/scss --importer node_modules/node-sass-magic-importer/dist/cli.js --include-path node_modules/bootstrap/scss --output public/assets/css --precision 6 && yarn css:modules:prod",
+		"css:modules:prod": "node-sass src/components/modules --importer node_modules/node-sass-magic-importer/dist/cli.js --include-path node_modules/bootstrap/scss --output public/assets/css --precision 6 && yarn css:post --env production",
+		"css:post": "postcss public/assets/css/*.css --config config/postcss.config.js -r",
+		"//4": " --- JS --- ",
+		"js:dev": "rollup -c config/rollup.config.js -m --environment BUILD:development",
+		"js:prod": "rollup -c config/rollup.config.js --environment BUILD:production",
+		"//6": " --- ASSETS --- ",
+		"favicons": "real-favicon generate config/favicon.config.json config/faviconData.json public/assets/img/favicon",
+		"//7": " --- BUILD (PROD) --- ",
+		"clean": "rm -rf public/assets/css/ && rm -rf public/assets/js/ && rm -rf public/assets/assets.json",
+		"build": "clean && js:prod && css:prod && hash && workbox && manifest",
+		"//8": " --- HASHING --- ",
+		"hash:dev": "hashmark -c public/assets -r -l 8 'css/**/*.css' 'js/**/*.js' '{dir}/{name}{ext}' --asset-map assets.json -s",
+		"hash": "hashmark -c public/assets -r -l 8 'css/**/*.css' 'js/**/*.js' '{dir}/{name}.{hash}{ext}' --asset-map assets.json -s",
+		"post:hash": "yarn postbuild -i templates/_layout.twig -c 'public/assets/css/*.css' -j 'public/assets/js/*.js' -g 'public' -r production",
+		"//9": " --- LINTING --- ",
+		"lint": "",
+		"//10": " --- WATCHING --- ",
+		"watch:css": "onchange 'src/scss/**/*.scss' -- yarn css:dev",
+		"watch:cssmodules": "onchange 'src/components/modules/**/*.scss' -- yarn css:modules",
+		"watch:js": "onchange 'src/**/*.js' -- yarn js:dev",
+		"watch": "run-p 'watch:css' 'watch:cssmodules' 'watch:js'",
+		"//11": " --- DEPLOYMENT --- ",
+		"workbox": "workbox generateSW config/workbox.config.js",
+		"manifest": "pwa-manifest ./public ./public/assets/img/favicons --icons=./src/img/favicon.png --startUrl=/"
+	},
+	"babel": {
+		"presets": [
+			[
+				"env",
+				{
+					"modules": false
+				}
+			]
+		],
+		"plugins": [
+			"external-helpers"
+		]
+	},
+	"browserslist": [
+		">= 1%",
+		"last 1 major version",
+		"not dead",
+		"Chrome >= 45",
+		"Firefox >= 38",
+		"Edge >= 12",
+		"Explorer >= 10",
+		"iOS >= 9",
+		"Safari >= 9",
+		"Android >= 4.4",
+		"Opera >= 30"
+	],
+	"eslintConfig": {
+		"env": {
+			"browser": true,
+			"es6": true
+		},
+		"globals": {
+			"ENV": true
+		},
+		"extends": "eslint:recommended",
+		"parserOptions": {
+			"sourceType": "module"
+		},
+		"rules": {
+			"no-console": "off",
+			"no-unused-vars": "off",
+			"no-undef": "off",
+			"linebreak-style": [
+				"error",
+				"unix"
+			]
+		}
+	},
+	"dependencies": {
+		"@babel/core": "^7.4.5",
+		"@babel/helper-module-imports": "^7.0.0",
+		"@babel/plugin-external-helpers": "^7.2.0",
+		"@babel/plugin-syntax-dynamic-import": "^7.2.0",
+		"@babel/plugin-transform-runtime": "^7.4.4",
+		"@babel/preset-env": "^7.4.5",
+		"@babel/runtime": "^7.4.5",
+		"@frctl/fractal": "^1.2.1",
+		"@frctl/twig": "git://github.com/samuelbirch/twig.git#master",
+		"@pwa/manifest-cli": "^1.4.0",
+		"@rollup/plugin-commonjs": "^11.0.0",
+		"@rollup/plugin-json": "^4.0.1",
+		"@rollup/plugin-node-resolve": "^6.0.0",
+		"@rollup/plugin-replace": "^2.3.0",
+		"autoprefixer": "^9.6.0",
+		"babel-core": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"bootstrap": "^4.2.1",
+		"browser-sync": "^2.26.7",
+		"cli-real-favicon": "^0.0.8",
+		"copyfiles": "^2.1.1",
+		"core-js": "3",
+		"critical": "^1.1.0",
+		"cssnano": "^4.1.10",
+		"faker": "^4.1.0",
+		"hashmark": "^5.0.0",
+		"imagemin-cli": "^5.0.0",
+		"kill-port": "^1.5.1",
+		"komp": "git://github.com/samuelbirch/komp.git#master",
+		"loadjs": "git://github.com/samuelbirch/loadjs.git#master",
+		"map-replace": "^1.0.2",
+		"node-sass": "^4.12.0",
+		"node-sass-magic-importer": "^5.3.2",
+		"npm-run-all": "^4.1.3",
+		"onchange": "^6.1.0",
+		"parallelshell": "3.0.2",
+		"postcss-cli": "^6.1.2",
+		"rename-cli": "^6.0.0",
+		"replaceinfiles": "^1.1.4",
+		"rollup": "^1.15.4",
+		"rollup-plugin-babel": "^4.0.3",
+		"rollup-plugin-eslint": "^7.0.0",
+		"rollup-plugin-glob-import": "^0.4.5",
+		"rollup-plugin-terser": "^5.0.0",
+		"rollup-plugin-uglify": "^6.0.2",
+		"run-script": "^0.1.1",
+		"uglify-es": "^3.3.4",
+		"workbox-cli": "^4.3.1",
+		"worker-timers": "^5.0.19"
+	}
+}

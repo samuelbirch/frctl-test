@@ -1,0 +1,52 @@
+{% macro url(image, size, opts={}) %}{% spaceless %}
+	{{ image }}
+{% endspaceless %}{% endmacro %}
+
+{% macro image(image, size, opts={}) %}{% spaceless %}
+	{% set class = opts.class ?? 'img-fluid' %}
+	{% set dims = image|split('/') %}
+	<img data-src="{{ image }}" class="{{ class ?? '' }}" alt="" loading="lazy" style="width:{{dims[3]}}px; height:{{dims[4]}}px;" />
+{% endspaceless %}{% endmacro %}
+
+{% macro picture(images, sizes, opts={}) %}{% spaceless %}
+<picture class="{% if opts.ratio is defined %} embed-responsive embed-responsive-{{ opts.ratio }}{% endif %}">
+	{% set dims = images[0]|split('/') %}
+	{% set dataAttr = [] %}
+	{% for key, value in opts.data ?? [] %}
+		{% set dataAttr = dataAttr|merge(['data-'~key~'='~value]) %}
+	{% endfor %}
+	{% if opts.lazy ?? true %}
+	<img class="{{ opts.class ?? '' }}" data-src="{{ images[0] }}" alt="" loading="lazy"  {% if opts.ratio is defined and opts.ratio is not null %}style="position:absolute; top:0; left:0; right:0; bottom:0"{% else %}style="width:{{dims[3]}}px;height:{{dims[4]}}px;"{% endif %} {{dataAttr|join(' ')}}>
+	{% else %}
+	<img class="{{ opts.class ?? '' }}" src="{{ images[0] }}" alt=""  {% if opts.ratio is defined and opts.ratio is not null %}style="position:absolute; top:0; left:0; right:0; bottom:0"{% endif %} {{dataAttr|join(' ')}}>
+	{% endif %}
+</picture>
+{% endspaceless %}{% endmacro %}
+
+{% macro cssImage(image, sizes, opts={}) %}{% spaceless %}
+{% set selector = opts.selector ? opts.selector : '.'~(opts.class is defined ? opts.class : 'bg'~"now"|date('YmdHis')~random(1000)) %}
+{% set dims = image|split('/') %}
+<style type="text/css">
+	@media (min-width: 576px) {
+		{{ selector|raw }}.lazyBg[data-was-processed="true"] {
+			background-image: url({{ image }});
+		}
+	}
+	@media (max-width: 575px) {
+		{{ selector|raw }}.lazyBg[data-was-processed="true"] {
+			background-image: url({{ image }});
+		}
+		{{ selector|raw }}.lazyBg[data-was-processed="true"]::before {
+			padding-top: {{ dims[4] / dims[3] * 100 }}%
+		}
+	}
+</style>
+{% endspaceless %}{% endmacro %}
+
+{% macro bgImage(image, sizes, opts={}) %}{% spaceless %}
+	{% set class = _self.classname(opts.class) %}
+		{% set opts = opts|merge({class:class}) %}
+	<div class="{{ class }} lazyBg">
+		{{ _self.cssImage(image, sizes, opts) }}
+	</div>
+{% endspaceless %}{% endmacro %}

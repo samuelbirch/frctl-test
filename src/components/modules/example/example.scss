@@ -1,0 +1,63 @@
+@import '../../../scss/defaults';
+
+[data-kd-id='014'] {
+	//@include remove-mod-padding;
+	[class^='col-'] {
+		@include last-child-mb-0;
+	}
+	@include media-breakpoint-up(md) {
+		.align-items-center {
+			img {
+				//margin-top: $module-padding-lg;
+				//margin-bottom: $module-padding-lg;
+			}
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		.align-items-start {
+			.content {
+				padding-top: 0;
+			}
+		}
+		.align-items-center {
+			img {
+				@include media-breakpoint-down(sm) {
+					margin-top: $module-padding-xs;
+				}
+			}
+			.content {
+				padding-top: 0;
+			}
+		}
+		.align-items-end {
+			@include media-breakpoint-down(sm) {
+				margin-top: $module-padding-xs;
+			}
+			.content {
+				padding-top: 0;
+			}
+		}
+	}
+	.content {
+		padding-top: $module-padding-xs;
+		padding-bottom: $module-padding-xs;
+		@include media-breakpoint-up(sm) {
+			padding-top: $module-padding-lg;
+			padding-bottom: $module-padding-lg;
+		}
+	}
+	&.desktop-layout-flip {
+		.row {
+			@include media-breakpoint-up(sm) {
+				[class^='col-']:first-child {
+					order: 2;
+					@include make-col-offset(1, $grid-columns);
+				}
+				[class^='col-']:last-child {
+					order: 1;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

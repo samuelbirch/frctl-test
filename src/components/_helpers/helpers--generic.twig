@@ -1,0 +1,49 @@
+{% macro isActive(slug, class, match, section) %}{% spaceless %}
+	
+{% endspaceless %}{% endmacro %}
+
+{% macro url(entry) %}{% spaceless %}
+    /
+{% endspaceless %}{% endmacro %}
+
+{% macro uri(entry) %}{% spaceless %}
+    /
+{% endspaceless %}{% endmacro %}
+
+{% macro slug(entry) %}{% spaceless %}
+    
+{% endspaceless %}{% endmacro %}
+
+{% macro title(entry) %}{% spaceless %}
+	{{ entry.heading ?? '' }}
+{% endspaceless %}{% endmacro %}
+
+{% macro isHomepage(entry) %}{% spaceless %}
+	false
+{% endspaceless %}{% endmacro %}
+
+{% macro moduleBorder(modules, index) %}{% spaceless %}
+	
+{% endspaceless %}{% endmacro %}
+
+{% macro modulePadding(modules, index) %}{% spaceless %}
+
+{% endspaceless %}{% endmacro %}
+
+{% macro markup(string) %}{% spaceless %}
+	{{ string|raw }}
+{% endspaceless %}{% endmacro %}
+
+{% macro linkBtn(button,style,legacyStyle,limit = null) %}{% spaceless %}
+	<a href="" class="btn btn-{{ button.style ? 'outline-' : '' }}{{ button.theme }} {{ style ?? '' }} {{ 'mr-2' }} mb-2">
+		{{ button.text }}
+	</a>
+{% endspaceless %}{% endmacro %}
+
+{% macro theme(field) %}{% spaceless %}
+	{{ field ?? 'light' }}
+{% endspaceless %}{% endmacro %}
+
+{% macro btnTheme(field) %}{% spaceless %}
+	{{ field ?? 'action' }}
+{% endspaceless %}{% endmacro %}

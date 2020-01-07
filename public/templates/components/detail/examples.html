@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="../../themes/mandelbrot/css/default.css?cachebust=1.2.1" type="text/css">
+
+
+<title>Examples | Kurious Digital</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+    </button>
+    <a href="../../index.html" class="Header-title" data-pjax>Kurious Digital</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+
+    
+    
+
+<div class="Pen" data-behaviour="pen" id="pen-c55cd78c51e1520c3561af25709bd799">
+
+    
+
+    <div class="Pen-panel Pen-header">
+    <h1 class="Pen-title">
+        <a class="Pen-previewLink" href="../preview/examples.html" title="Component preview">
+            Examples
+            <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+
+        </a>
+    </h1>
+    
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #FF9233; border-color: #FF9233;">WIP</label>
+
+</div>
+
+
+</div>
+
+
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-c55cd78c51e1520c3561af25709bd799">
+    <div class="Preview-wrapper" data-role="resizer">
+        <div class="Preview-resizer">
+            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/examples.html"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-modals"
+                 style=""
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
+        </div>
+        <div class="Preview-handle" data-role="resize-handle"></div>
+        <div class="Preview-overlay"></div>
+    </div>
+</div>
+
+
+    <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
+
+    <div class="Pen-panel Pen-info" data-role="info">
+    <div class="Browser" data-behaviour="browser" id="browser-c55cd78c51e1520c3561af25709bd799">
+
+    
+
+<div class="Browser-controls">
+    <ul class="Browser-tabs">
+        
+        
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
+            <a href="#browser-c55cd78c51e1520c3561af25709bd799-panel-html">HTML</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--view" data-role="tab">
+            <a href="#browser-c55cd78c51e1520c3561af25709bd799-panel-view">View</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--context" data-role="tab">
+            <a href="#browser-c55cd78c51e1520c3561af25709bd799-panel-context">Context</a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-c55cd78c51e1520c3561af25709bd799-panel-info">Info</a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-c55cd78c51e1520c3561af25709bd799-panel-notes">Notes</a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    
+    
+<div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-c55cd78c51e1520c3561af25709bd799-panel-html">
+    <code class="Code Code--lang-html">
+        
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/css/form.css"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span><span class="css">
+			    <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-attr">[class^=<span class="hljs-string">'col-'</span>]</span>&gt;*<span class="hljs-selector-pseudo">:last-child</span> {
+			        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-start</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">767.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-center</span> <span class="hljs-selector-tag">img</span> {
+			            <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3rem</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-center</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">767.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-end</span> {
+			            <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3rem</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-end</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+
+			    <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.content</span> {
+			        <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">3rem</span>;
+			        <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3rem</span>;
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width:</span> <span class="hljs-number">576px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">6rem</span>;
+			            <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">6rem</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width:</span> <span class="hljs-number">576px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span><span class="hljs-selector-class">.desktop-layout-flip</span> <span class="hljs-selector-class">.row</span> <span class="hljs-selector-attr">[class^=<span class="hljs-string">'col-'</span>]</span><span class="hljs-selector-pseudo">:first-child</span> {
+			            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+			            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8.333333%</span>;
+			        }
+
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span><span class="hljs-selector-class">.desktop-layout-flip</span> <span class="hljs-selector-class">.row</span> <span class="hljs-selector-attr">[class^=<span class="hljs-string">'col-'</span>]</span><span class="hljs-selector-pseudo">:last-child</span> {
+			            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+			            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+			</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+			<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"kd-theme-bg   "</span> <span class="hljs-attr">data-kd-type</span>=<span class="hljs-string">"mod"</span> <span class="hljs-attr">data-kd-theme</span>=<span class="hljs-string">"primary"</span> <span class="hljs-attr">data-kd-handle</span>=<span class="hljs-string">"example"</span> <span class="hljs-attr">data-kd-id</span>=<span class="hljs-string">"014"</span> <span class="hljs-attr">data-id</span>=<span class="hljs-string">"1"</span>&gt;</span>
+			    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+			        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row align-items-center"</span>&gt;</span>
+			            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-5 mb-5 mb-sm-0 text-center"</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">picture</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-fluid w-100"</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"https://placeimg.com/370/370/nature"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">loading</span>=<span class="hljs-string">"lazy"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width:370px;height:370px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
+			            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-6 offset-sm-1 kd-theme-yiq-text styled-links content"</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Perferendis porro labore et fugit.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Officia et neque et commodi est dolores illum. Laborum asperiores autem sunt et nulla accusamus recusandae velit non. Cumque architecto et eos ex sequi et explicabo. Eligendi dolore in consectetur et nihil.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-action btn-lg mr-2 mb-2"</span>&gt;</span>
+			                        View Now
+			                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+			            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+			<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/css/form.css"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span><span class="css">
+			    <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-attr">[class^=<span class="hljs-string">'col-'</span>]</span>&gt;*<span class="hljs-selector-pseudo">:last-child</span> {
+			        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-start</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">767.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-center</span> <span class="hljs-selector-tag">img</span> {
+			            <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3rem</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-center</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">767.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-end</span> {
+			            <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3rem</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-end</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+
+			    <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.content</span> {
+			        <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">3rem</span>;
+			        <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3rem</span>;
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width:</span> <span class="hljs-number">576px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">6rem</span>;
+			            <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">6rem</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width:</span> <span class="hljs-number">576px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span><span class="hljs-selector-class">.desktop-layout-flip</span> <span class="hljs-selector-class">.row</span> <span class="hljs-selector-attr">[class^=<span class="hljs-string">'col-'</span>]</span><span class="hljs-selector-pseudo">:first-child</span> {
+			            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+			            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8.333333%</span>;
+			        }
+
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span><span class="hljs-selector-class">.desktop-layout-flip</span> <span class="hljs-selector-class">.row</span> <span class="hljs-selector-attr">[class^=<span class="hljs-string">'col-'</span>]</span><span class="hljs-selector-pseudo">:last-child</span> {
+			            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+			            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+			</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+			<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"kd-theme-bg   "</span> <span class="hljs-attr">data-kd-type</span>=<span class="hljs-string">"mod"</span> <span class="hljs-attr">data-kd-theme</span>=<span class="hljs-string">"secondary"</span> <span class="hljs-attr">data-kd-handle</span>=<span class="hljs-string">"example"</span> <span class="hljs-attr">data-kd-id</span>=<span class="hljs-string">"014"</span> <span class="hljs-attr">data-id</span>=<span class="hljs-string">"1"</span>&gt;</span>
+			    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+			        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row align-items-center"</span>&gt;</span>
+			            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-5 mb-5 mb-sm-0 text-center"</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">picture</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-fluid w-100"</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"https://placeimg.com/370/370/nature"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">loading</span>=<span class="hljs-string">"lazy"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width:370px;height:370px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
+			            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-6 offset-sm-1 kd-theme-yiq-text styled-links content"</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Animi unde iste qui aut.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Vel minima eum recusandae. Molestiae quisquam quibusdam officia pariatur deserunt. Consequatur sint nesciunt ipsa ut. Ad facere eum omnis recusandae.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-action btn-lg mr-2 mb-2"</span>&gt;</span>
+			                        View Now
+			                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+			            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Three<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+			<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/css/form.css"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span><span class="css">
+			    <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-attr">[class^=<span class="hljs-string">'col-'</span>]</span>&gt;*<span class="hljs-selector-pseudo">:last-child</span> {
+			        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-start</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">767.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-center</span> <span class="hljs-selector-tag">img</span> {
+			            <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3rem</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-center</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">767.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-end</span> {
+			            <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">3rem</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width:</span> <span class="hljs-number">575.98px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.align-items-end</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+
+			    <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.content</span> {
+			        <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">3rem</span>;
+			        <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3rem</span>;
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width:</span> <span class="hljs-number">576px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span> <span class="hljs-selector-class">.content</span> {
+			            <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">6rem</span>;
+			            <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">6rem</span>;
+			        }
+			    }
+
+			    <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width:</span> <span class="hljs-number">576px</span>) {
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span><span class="hljs-selector-class">.desktop-layout-flip</span> <span class="hljs-selector-class">.row</span> <span class="hljs-selector-attr">[class^=<span class="hljs-string">'col-'</span>]</span><span class="hljs-selector-pseudo">:first-child</span> {
+			            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+			            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8.333333%</span>;
+			        }
+
+			        <span class="hljs-selector-attr">[data-kd-id=<span class="hljs-string">'014'</span>]</span><span class="hljs-selector-class">.desktop-layout-flip</span> <span class="hljs-selector-class">.row</span> <span class="hljs-selector-attr">[class^=<span class="hljs-string">'col-'</span>]</span><span class="hljs-selector-pseudo">:last-child</span> {
+			            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+			            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+			        }
+			    }
+			</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+			<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"kd-theme-bg   "</span> <span class="hljs-attr">data-kd-type</span>=<span class="hljs-string">"mod"</span> <span class="hljs-attr">data-kd-theme</span>=<span class="hljs-string">"dark"</span> <span class="hljs-attr">data-kd-handle</span>=<span class="hljs-string">"example"</span> <span class="hljs-attr">data-kd-id</span>=<span class="hljs-string">"014"</span> <span class="hljs-attr">data-id</span>=<span class="hljs-string">"1"</span>&gt;</span>
+			    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+			        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row align-items-center"</span>&gt;</span>
+			            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-5 mb-5 mb-sm-0 text-center"</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">picture</span> <span class="hljs-attr">class</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"img-fluid w-100"</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"https://placeimg.com/370/370/nature"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">loading</span>=<span class="hljs-string">"lazy"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width:370px;height:370px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">picture</span>&gt;</span>
+			            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-sm-6 offset-sm-1 kd-theme-yiq-text styled-links content"</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Perferendis porro labore et fugit.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Officia et neque et commodi est dolores illum. Laborum asperiores autem sunt et nulla accusamus recusandae velit non. Cumque architecto et eos ex sequi et explicabo. Eligendi dolore in consectetur et nihil.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+			                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-action btn-lg mr-2 mb-2"</span>&gt;</span>
+			                        View Now
+			                    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+			            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></pre>
+        
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-c55cd78c51e1520c3561af25709bd799-panel-view">
+    <code class="Code Code--lang-twig">
+        <pre><span class="hljs-template-tag">{% <span class="hljs-name">render</span> '<a href="example.html">@example</a>' %}</span><span class="xml">
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name">render</span> '<a href="example.html">@example</a>--two' %}</span><span class="xml">
+
+</span><span class="hljs-template-tag">{% <span class="hljs-name">render</span> '<a href="example.html">@example</a>--three' with {module:{theme:'dark'}} %}</span></pre>
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-c55cd78c51e1520c3561af25709bd799-panel-context">
+    <code class="Code Code--lang-json">
+        
+            
+            <pre><span class="hljs-comment">/* No context defined for this component. */</span></pre>
+            
+        
+    </code>
+</div>
+
+    
+    
+
+
+
+
+    
+    <div class="Browser-panel" data-role="tab-panel" id="browser-c55cd78c51e1520c3561af25709bd799-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@examples</span>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/examples.html"><span>With layout</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                    <li><a data-no-pjax href="../render/examples.html"><span>Component only</span> <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+</a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">../src/components/pages/examples.twig</span>
+        </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(3)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="example.html">@<span>example</span></a>, 
+            
+                <a href="example--two.html">@<span>example--two</span></a>, 
+            
+                <a href="example--three.html">@<span>example--three</span></a>
+            
+            </span>
+        </li class="Meta-item">
+        
+        
+    </ul>
+</div>
+
+    
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-c55cd78c51e1520c3561af25709bd799-panel-notes">
+    <div class="Prose Prose--condensed">
+        
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        
+    </div>
+</div>
+
+    
+
+</div>
+
+</div>
+
+
+    
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-modules">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Modules</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-example">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Example</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="example--one.html" data-pjax>
+                <span>Example 1</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="example--two.html" data-pjax>
+                <span>Example 2</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="example--three.html" data-pjax>
+                <span>Three</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-gallery">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Gallery</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="gallery--masonry.html" data-pjax>
+                <span>Masonry</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="gallery--grid.html" data-pjax>
+                <span>Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="gallery--rows.html" data-pjax>
+                <span>Rows</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="heading.html" data-pjax>
+                <span>Heading</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-pages">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Pages</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Examples</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="gallerys.html" data-pjax>
+                <span>Gallerys</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <h3 class="Tree-title">documentation</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../index.html" data-pjax>
+                <span>Overview</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.2.1"></script>
+
+
+
+</body>
+</html>

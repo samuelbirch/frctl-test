@@ -1,0 +1,177 @@
+@import '../../../scss/defaults';
+
+[data-kd-handle='gallery'] {
+	.gallery {
+		display: flex;
+	}
+
+	.gallery-col {
+		flex-grow: 1;
+	}
+
+	.gal-2 {
+		.gallery-col:nth-child(1) {
+			display: block;
+		}
+
+		.gallery-col:nth-child(2) {
+			display: block;
+		}
+
+		.gallery-col:nth-child(3) {
+			display: none;
+		}
+
+		.gallery-col:nth-child(4) {
+			display: none;
+		}
+	}
+
+	.gal-3 {
+		.gallery-col:nth-child(1) {
+			display: block;
+		}
+
+		.gallery-col:nth-child(2) {
+			display: block;
+		}
+
+		.gallery-col:nth-child(3) {
+			display: block;
+		}
+
+		.gallery-col:nth-child(4) {
+			display: none;
+		}
+	}
+
+	.gal-4 {
+		.gallery-col:nth-child(1) {
+			display: block;
+		}
+
+		.gallery-col:nth-child(2) {
+			display: block;
+		}
+
+		.gallery-col:nth-child(3) {
+			display: block;
+		}
+
+		.gallery-col:nth-child(4) {
+			display: block;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		.gal-md-2 {
+			.gallery-col:nth-child(1) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(2) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(3) {
+				display: none;
+			}
+
+			.gallery-col:nth-child(4) {
+				display: none;
+			}
+		}
+
+		.gal-md-3 {
+			.gallery-col:nth-child(1) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(2) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(3) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(4) {
+				display: none;
+			}
+		}
+
+		.gal-md-4 {
+			.gallery-col:nth-child(1) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(2) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(3) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(4) {
+				display: block;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		.gal-lg-2 {
+			.gallery-col:nth-child(1) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(2) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(3) {
+				display: none;
+			}
+
+			.gallery-col:nth-child(4) {
+				display: none;
+			}
+		}
+
+		.gal-lg-3 {
+			.gallery-col:nth-child(1) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(2) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(3) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(4) {
+				display: none;
+			}
+		}
+
+		.gal-lg-4 {
+			.gallery-col:nth-child(1) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(2) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(3) {
+				display: block;
+			}
+
+			.gallery-col:nth-child(4) {
+				display: block;
+			}
+		}
+	}
+}
